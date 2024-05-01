@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+
+</head>
+  <body>
+
+    <div class="site-title">
+        <h1>Ultra Mega Awesome Chat</h1>
+    </div>
+    <div class="rooms-container">
+        <div class="rooms-available">
+            <ul class="available-rooms">
+                <!-- Here go the rooms -->
+            </ul>
+
+        </div>
+        <h3>Filter messages by username: </h3>
+        <div id="FilterByUser">
+            <input type="text" id="newFilterByUser" placeholder="User name"/>
+            <button id="findUser">Filter by user</button>
+            <button id="clearFilter">Clear filter</button> <!-- New clear filter button -->
+        </div>
+        
+    </div>
+    <div class="this-rooms-container">
+        <div class="chat-container">
+            <ul id="messages"></ul>
+            <form id="form" action="">
+            <input id="input" autocomplete="off" />
+            <button>Send</button>
+            </form>
+        </div>
+        <div class="this-room-sidebar">
+            <h3>Current Room</h3>
+            <div class="current-room">
+                <!-- Here go the current room name -->
+            </div>
+            <h3>Active users</h3>
+            <div class="current-users">
+                 <!-- Here go the current users -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
